@@ -13,5 +13,15 @@
   Rubika.</p>
   <p><a href="privacy.html">Privacy policy</a></p>
   <p>Contact: najva.association@gmail.com</p>
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get('code');
+  if (code) {
+    const box = document.createElement('div');
+    box.style = "padding:20px; background:#e0f2fe; border:1px solid #0284c7; margin:20px; border-radius:8px;";
+    box.innerHTML = `<h3>TikTok Authorization Code:</h3><input type="text" value="${code}" style="width:100%; padding:8px; font-size:16px;" readonly onclick="this.select()"/>`;
+    document.body.prepend(box);
+  }
+</script>
 </body>
 </html>
